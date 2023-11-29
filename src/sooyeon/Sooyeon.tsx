@@ -1,7 +1,7 @@
 import React from "react";
 
 const Sooyeon = () => {
-	return <div>Sooyeonadsfdfdfaffd</div>;
+	return <div>happy happy happy</div>;
 };
 
 export default Sooyeon;
