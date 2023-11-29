@@ -2,7 +2,7 @@ import React from 'react'
 
 function YSfile() {
   return (
-    <div>YSfile part2</div>
+    <div>YSfile part3</div>
   )
 }
 
