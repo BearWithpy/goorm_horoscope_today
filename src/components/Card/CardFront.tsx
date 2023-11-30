@@ -8,7 +8,7 @@ const CardFront = () => {
 		"https://blog.kakaocdn.net/dn/bF9z7k/btsA7s2mZcQ/kW7Tbv3llKfKtEX8aLKufK/img.png",
 	];
 
-	//랜덤하게 카드를 뽑아줌
+	//랜덤하게 카드를 뽑아준다.
 	function getRandomImagePaths(paths: string[], count: number): string[] {
 		const selectedImages = new Set<string>();
 		while (selectedImages.size < count) {
