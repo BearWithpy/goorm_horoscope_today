@@ -1,0 +1,14 @@
+.footer_space {
+  position : fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  border-top: 1px solid #606060;
+  color: #606060
+  /* background-color: beige; */
+
+}
+
