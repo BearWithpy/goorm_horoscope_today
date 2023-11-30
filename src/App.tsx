@@ -4,6 +4,7 @@ import "./App.css"
 import Header from "./components/Header/Header"
 import CardBack from "./components/Card/CardBack";
 import CardFront from "./components/Card/CardFront";
+import Footer from "./components/Footer/Footer";
 
 function App() {
 	return (
@@ -11,6 +12,7 @@ function App() {
       <Header />
 			<CardBack />
 			<CardFront />
+			<Footer />
 		</div>
 	)
 }
