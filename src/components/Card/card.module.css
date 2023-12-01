@@ -3,35 +3,11 @@
 #495E57
 #45474B */
 
-.pattern {
-  width: 206px;
-  height: 294px;
-  border-radius: 20px;
-  --s: 40px; /* control the size */
-  --_g: #fcd036 0 100%, #0000 102%;
-  background: conic-gradient(#0000 75%, var(--_g)) calc(var(--s) / 4)
-      calc(var(--s) / 4),
-    radial-gradient(65% 65% at 50% -50%, var(--_g)),
-    radial-gradient(65% 65% at -50% 50%, var(--_g)),
-    radial-gradient(65% 65% at 50% 150%, var(--_g)),
-    radial-gradient(65% 65% at 150% 50%, var(--_g)) #987f69;
-  background-size: var(--s) var(--s);
-  transition: 0.4s;
-  animation: fadeIn2 2s;
-}
-
-.pattern:hover {
-  box-shadow: 0 0 15px 7px gold;
-  transition: 0.2s;
-}
-
-@keyframes fadeIn2 {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.body_inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .guidance {
@@ -129,18 +105,55 @@
     transform: rotateY(3600deg);
   }
 }
-/* 
-@keyframes sizeChange {
+
+.pattern {
+  width: 206px;
+  height: 294px;
+  border-radius: 20px;
+  --s: 40px; /* control the size */
+  --_g: #fcd036 0 100%, #0000 102%;
+  background: conic-gradient(#0000 75%, var(--_g)) calc(var(--s) / 4)
+      calc(var(--s) / 4),
+    radial-gradient(65% 65% at 50% -50%, var(--_g)),
+    radial-gradient(65% 65% at -50% 50%, var(--_g)),
+    radial-gradient(65% 65% at 50% 150%, var(--_g)),
+    radial-gradient(65% 65% at 150% 50%, var(--_g)) #987f69;
+  background-size: var(--s) var(--s);
+  transition: 0.4s;
+  animation: fadeIn2 2s;
+}
+
+.pattern:hover {
+  box-shadow: 0 0 15px 7px gold;
+  transition: 0.2s;
+}
+
+@keyframes fadeIn2 {
   0% {
-    width: 200%;
-    height: 110vh;
-  }
-  50% {
-    width: 200%;
-    height: 110vh;
+    opacity: 0;
   }
   100% {
-    width: 200px;
-    height: 250px;
+    opacity: 1;
   }
-} */
+}
+
+.textForWaiting {
+  margin-top: 100px;
+  color: white;
+  font-size: 20px;
+  font-family: "Grandiflora One";
+  font-weight: bold;
+  animation: fadeOut 4.5s forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

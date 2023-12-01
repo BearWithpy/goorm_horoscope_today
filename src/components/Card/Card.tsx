@@ -25,11 +25,20 @@ const Card = (): React.JSX.Element => {
   const [randomImagePaths, setRandomImagePaths] = useState<string[]>([]);
   const [isClicked, setIsClicked] = useState(false);
   const [guidance, setGuidance] = useState("카드를 클릭하세요.");
+  const [isAnimated, setIsAnimated] = useState(false);
 
   // 컴포넌트가 마운트될 때 랜덤 이미지 경로를 선택
   useEffect(() => {
     setRandomImagePaths(getRandomImagePaths(imageUrls, 1));
   }, []); // 빈 의존성 배열을 사용하여 처음 마운트될 때만 실행
+
+  useEffect(() => {
+    setIsAnimated(true);
+    const timer = setTimeout(() => {
+      setIsAnimated(false);
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleCardClick = () => {
     setIsClicked(!isClicked);
@@ -37,7 +46,7 @@ const Card = (): React.JSX.Element => {
   };
 
   return (
-    <>
+    <div className={styles.body_inner}>
       <div className={styles.guidance}>{guidance}</div>
       <div className={styles.card_space}>
         {isClicked ? (
@@ -74,7 +83,8 @@ const Card = (): React.JSX.Element => {
           </div>
         )}
       </div>
-    </>
+      <div className={styles.textForWaiting}>카드에 기 모으는 중...</div>
+    </div>
   );
 };
 
