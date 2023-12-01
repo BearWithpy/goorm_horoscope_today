@@ -1,8 +1,9 @@
 .card {
-	width: 100%;
+	width: 30%;
 	height: 100%;
 	position: relative;
-	margin-left: 20px;
+	margin-left: 40px;
+	margin-top: 40px;
 }
 
 .card_front img {
@@ -13,7 +14,7 @@
 .card_front {
 	background: #f4ce14;
 	transform: rotateY(180deg);
-	border-radius: 30px;
-	width: 206px;
-	height: 294px;
+	border-radius: 49px;
+	width: 392px;
+	height: 560px;
 }
