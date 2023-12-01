@@ -22,36 +22,70 @@ const Card = (): React.JSX.Element => {
 
   // 이미지 경로들을 저장할 상태
   const [randomImagePaths, setRandomImagePaths] = useState<string[]>([]);
+  const [isClicked, setIsClicked] = useState(false);
 
   // 컴포넌트가 마운트될 때 랜덤 이미지 경로를 선택
   useEffect(() => {
     setRandomImagePaths(getRandomImagePaths(imageUrls, 1));
   }, []); // 빈 의존성 배열을 사용하여 처음 마운트될 때만 실행
 
+  const handleCardClick = () => {
+    setIsClicked(!isClicked);
+  };
+
   return (
     <>
       <div className={styles.guidance}>카드를 클릭하세요.</div>
-      <div className={styles.flip}>
-        <div className={styles.card}>
-          <div className={styles.card_front}>
-            {randomImagePaths.map((path, index) => (
-              <img
-                className={styles.card_img}
-                key={index}
-                src={path}
-                alt={`Random Card Front ${index}`}
-              />
-            ))}
+      <div className={styles.card_space}>
+        {isClicked ? (
+          <>
+            <div className={styles.flip}>
+              <div className={styles.card}>
+                <div className={styles.card_back}>
+                  <div className={styles.pattern}></div>
+                </div>
+              </div>
+            </div>
+            <div className={styles.flip}>
+              <div className={styles.card}>
+                <div className={styles.card_back}>
+                  <div className={styles.pattern}></div>
+                </div>
+              </div>
+            </div>
+            <div className={styles.flip}>
+              <div className={styles.card}>
+                <div className={styles.card_back}>
+                  <div className={styles.pattern}></div>
+                </div>
+              </div>
+            </div>
+          </>
+        ) : (
+          <div className={styles.flip}>
+            <div className={styles.card}>
+              <div className={styles.card_front}>
+                {randomImagePaths.map((path, index) => (
+                  <img
+                    className={styles.card_img}
+                    key={index}
+                    src={path}
+                    alt={`Random Card Front ${index}`}
+                  />
+                ))}
+              </div>
+              <div
+                className={styles.card_back}
+                onClick={() => {
+                  console.log("Go Detail page and check out");
+                  handleCardClick();
+                }}
+              >
+                <div className={styles.pattern}></div>
+              </div>
+            </div>
           </div>
-          <div
-            className={styles.card_back}
-            onClick={() => {
-              console.log("Go Detail page and check out");
-            }}
-          >
-            <div className={styles.pattern}></div>
-          </div>
-        </div>
+        )}
       </div>
     </>
   );
