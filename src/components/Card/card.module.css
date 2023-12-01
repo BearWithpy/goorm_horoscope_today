@@ -57,7 +57,7 @@
 
 .guidance {
   position: absolute;
-  top: 50%;
+  /* top: 50%; */
   left: 50%;
   transform: translate(-50%, 250%);
   color: white;
@@ -102,12 +102,12 @@
 
 .card_front {
   background: #f4ce14;
+  transform: rotateY(180deg);
 }
 
 /* // 뒷면은 사전에 미리 뒤집기 */
 .card_back {
   background: rgb(253, 239, 160);
-  transform: rotateY(180deg);
 }
 
 .card_front,
