@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import styles from "components/Card/card.module.css";
+import horoscopeCall from "utils/horoscope";
 
 const Card = (): React.JSX.Element => {
   const imageUrls: string[] = [
@@ -42,7 +43,12 @@ const Card = (): React.JSX.Element => {
               />
             ))}
           </div>
-          <div className={styles.card_back}>
+          <div
+            className={styles.card_back}
+            onClick={() => {
+              console.log("Go Detail page and check out");
+            }}
+          >
             <div className={styles.pattern}></div>
           </div>
         </div>
