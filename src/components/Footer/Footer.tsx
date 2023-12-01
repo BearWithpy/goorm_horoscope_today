@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Footer.module.css";
 
-function Footer() {
+const Footer = (): React.JSX.Element => {
   return (
     <div className={styles.footer_space}>
       <div className={`${styles.footer_text} material-symbols-outlined`}>
@@ -10,6 +10,6 @@ function Footer() {
       <div>CPK limited</div>
     </div>
   );
-}
+};
 
 export default Footer;

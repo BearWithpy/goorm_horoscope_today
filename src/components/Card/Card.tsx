@@ -1,7 +1,7 @@
-import React, { useState, useEffect, Component } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "../Card/card.module.css";
 
-const Card = () => {
+const Card = (): React.JSX.Element => {
   const imageUrls: string[] = [
     "https://blog.kakaocdn.net/dn/bLY3BJ/btsBb8VXuP7/W8tkLTVdr688IL5Vq4S4VK/img.png",
     "https://blog.kakaocdn.net/dn/d8tJmb/btsBfI9CyaT/QmUjMmgSm2TyPJlZbtTs1K/img.png",

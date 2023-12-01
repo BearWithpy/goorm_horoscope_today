@@ -1,6 +1,6 @@
 import React from "react";
 
-const DemoComponent = () => {
+const DemoComponent = (): React.JSX.Element => {
   return <div></div>;
 };
 
