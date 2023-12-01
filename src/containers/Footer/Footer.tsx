@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Footer.module.css";
+import styles from "containers/Footer/Footer.module.css";
 
 const Footer = (): React.JSX.Element => {
   return (

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import styles from "../Card/card.module.css";
+
+import styles from "components/Card/card.module.css";
 
 const Card = (): React.JSX.Element => {
   const imageUrls: string[] = [
