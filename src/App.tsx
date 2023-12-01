@@ -9,29 +9,29 @@ import horoscopeCall from "utils/horoscope";
 import DetailPage from "pages/DetailPage";
 
 const App = (): React.JSX.Element => {
-  // async function fetchAndParseHoroscope() {
-  //   try {
-  //     const horoStr = await horoscopeCall();
-  //     if (horoStr) {
-  //       const horoJson = JSON.parse(horoStr);
-  //       return horoJson;
-  //     }
-  //     return null;
-  //   } catch (error) {
-  //     console.error("Horoscope fetching or parsing failed:", error);
-  //     return null;
-  //   }
-  // }
+  async function fetchAndParseHoroscope() {
+    try {
+      const horoStr = await horoscopeCall();
+      if (horoStr) {
+        const horoJson = JSON.parse(horoStr);
+        return horoJson;
+      }
+      return null;
+    } catch (error) {
+      console.error("Horoscope fetching or parsing failed:", error);
+      return null;
+    }
+  }
 
-  // useEffect(() => {
-  //   fetchAndParseHoroscope().then((horoJson) => {
-  //     if (horoJson) {
-  //       console.log(horoJson);
-  //     } else {
-  //       console.log("No horoscope data received.");
-  //     }
-  //   });
-  // }, []);
+  useEffect(() => {
+    fetchAndParseHoroscope().then((horoJson) => {
+      if (horoJson) {
+        console.log(horoJson);
+      } else {
+        console.log("No horoscope data received.");
+      }
+    });
+  }, []);
 
   return (
     <div>
