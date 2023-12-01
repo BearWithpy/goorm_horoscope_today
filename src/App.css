@@ -3,109 +3,53 @@
 @import url("https://fonts.googleapis.com/css?family=Gugi");
 
 * {
-    font-family: "Black Han Sans";
-    /* font-family: "Gugi"; */
-    /* font-family: "Grandiflora One"; */
+  /* font-family: "Grandiflora One"; */
+  /* font-family: "Gugi"; */
+  /* font-family: "Black Han Sans"; */
 }
 
 body {
-    position: relative;
-    margin: 0;
-    padding: 0;
-    background-color: #45474B;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background-color: #45474b;
 }
 
 .App {
-    text-align: center;
+  text-align: center;
 }
 
 .App-logo {
-    height: 40vmin;
-    pointer-events: none;
+  height: 40vmin;
+  pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
 }
 
 .App-header {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
 .App-link {
-    color: #61dafb;
+  color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-.pattern {
-    width: 200px;
-    height: 400px;
-    background-color: #555;
-    background-image: linear-gradient(
-            30deg,
-            #444 12%,
-            transparent 12.5%,
-            transparent 87%,
-            #444 87.5%,
-            #444
-        ),
-        linear-gradient(
-            150deg,
-            #444 12%,
-            transparent 12.5%,
-            transparent 87%,
-            #444 87.5%,
-            #444
-        ),
-        linear-gradient(
-            30deg,
-            #444 12%,
-            transparent 12.5%,
-            transparent 87%,
-            #444 87.5%,
-            #444
-        ),
-        linear-gradient(
-            150deg,
-            #444 12%,
-            transparent 12.5%,
-            transparent 87%,
-            #444 87.5%,
-            #444
-        ),
-        linear-gradient(
-            60deg,
-            #888 25%,
-            transparent 25.5%,
-            transparent 75%,
-            #888 75%,
-            #888
-        ),
-        linear-gradient(
-            60deg,
-            #888 25%,
-            transparent 25.5%,
-            transparent 75%,
-            #888 75%,
-            #888
-        );
-    background-position: 0 0, 0 0, 25px 50px, 25px 50px, 0 0, 25px 50px;
-    background-size: 50px 100px;
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
