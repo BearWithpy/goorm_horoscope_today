@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 import styles from "components/Card/card.module.css";
 import horoscopeCall from "utils/horoscope";
@@ -23,6 +24,7 @@ const Card = (): React.JSX.Element => {
   // 이미지 경로들을 저장할 상태
   const [randomImagePaths, setRandomImagePaths] = useState<string[]>([]);
   const [isClicked, setIsClicked] = useState(false);
+  const [guidance, setGuidance] = useState("카드를 클릭하세요.");
 
   // 컴포넌트가 마운트될 때 랜덤 이미지 경로를 선택
   useEffect(() => {
@@ -31,35 +33,20 @@ const Card = (): React.JSX.Element => {
 
   const handleCardClick = () => {
     setIsClicked(!isClicked);
+    setGuidance("원하는 카드를 고르세요.");
   };
 
   return (
     <>
-      <div className={styles.guidance}>카드를 클릭하세요.</div>
+      <div className={styles.guidance}>{guidance}</div>
       <div className={styles.card_space}>
         {isClicked ? (
           <>
-            <div className={styles.flip}>
-              <div className={styles.card}>
-                <div className={styles.card_back}>
-                  <div className={styles.pattern}></div>
-                </div>
-              </div>
-            </div>
-            <div className={styles.flip}>
-              <div className={styles.card}>
-                <div className={styles.card_back}>
-                  <div className={styles.pattern}></div>
-                </div>
-              </div>
-            </div>
-            <div className={styles.flip}>
-              <div className={styles.card}>
-                <div className={styles.card_back}>
-                  <div className={styles.pattern}></div>
-                </div>
-              </div>
-            </div>
+            <Link to="/first_card" className={styles.pattern} />
+            <Link to="/second_card" className={styles.pattern} />
+            <Link to="/third_card" className={styles.pattern} />
+            <Link to="/fourth_card" className={styles.pattern} />
+            <Link to="/fifth_card" className={styles.pattern} />
           </>
         ) : (
           <div className={styles.flip}>

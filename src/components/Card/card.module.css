@@ -1,75 +1,37 @@
-/* .pattern {
-  width: 206px;
-  height: 294px;
-  border-radius: 20px;
-  background-color: #f6f8f5;
-  background-image: linear-gradient(
-      30deg,
-      #f4ce14 12%,
-      transparent 12.5%,
-      transparent 87%,
-      #495e57 87.5%,
-      #444
-    ),
-    linear-gradient(
-      150deg,
-      #f4ce14 12%,
-      transparent 12.5%,
-      transparent 87%,
-      #444 87.5%,
-      #444
-    ),
-    linear-gradient(
-      30deg,
-      #495e57 12%,
-      transparent 12.5%,
-      transparent 87%,
-      #444 87.5%,
-      #444
-    ),
-    linear-gradient(
-      150deg,
-      #495e57 12%,
-      transparent 12.5%,
-      transparent 87%,
-      #444 87.5%,
-      #444
-    ),
-    linear-gradient(
-      60deg,
-      #f4ce14 25%,
-      transparent 25.5%,
-      transparent 75%,
-      #888 75%,
-      #888
-    ),
-    linear-gradient(
-      60deg,
-      #495e57 25%,
-      transparent 25.5%,
-      transparent 75%,
-      #888 75%,
-      #888
-    );
-  background-position: 0 0, 0 0, 25px 50px, 25px 50px, 0 0, 25px 50px;
-  background-size: 50px 100px;
-} */
-
 /* #F5F7F8
 #F4CE14
 #495E57
 #45474B */
 
-/* @keyframes colors {
-  100% {
-    filter: (10%);
-  }
-} */
 .pattern {
   width: 206px;
   height: 294px;
   border-radius: 20px;
-  background-color: #478d23;
+  --s: 40px; /* control the size */
+  --_g: #fcd036 0 100%, #0000 102%;
+  background: conic-gradient(#0000 75%, var(--_g)) calc(var(--s) / 4)
+      calc(var(--s) / 4),
+    radial-gradient(65% 65% at 50% -50%, var(--_g)),
+    radial-gradient(65% 65% at -50% 50%, var(--_g)),
+    radial-gradient(65% 65% at 50% 150%, var(--_g)),
+    radial-gradient(65% 65% at 150% 50%, var(--_g)) #987f69;
+  background-size: var(--s) var(--s);
+  transition: 0.4s;
+  animation: fadeIn2 2s;
+}
+
+.pattern:hover {
+  box-shadow: 0 0 15px 7px gold;
+  transition: 0.2s;
+}
+
+@keyframes fadeIn2 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .guidance {
@@ -89,6 +51,7 @@
   justify-content: space-around;
   align-items: center;
   width: 100vw;
+  margin-top: 150px;
 }
 
 @keyframes guidanceFadeIn {
@@ -106,7 +69,6 @@
 .flip {
   width: 206px;
   height: 294px;
-  margin-top: 100px;
   animation: sizeChange 4s;
 }
 
