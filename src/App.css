@@ -6,9 +6,13 @@ body {
   position: relative;
   margin: 0;
   padding: 0;
-  background-color: #45474b;
+  background-color: #2b2c2e;
   display: flex;
   justify-content: center;
+}
+
+* {
+  text-decoration: none;
 }
 
 .App {
