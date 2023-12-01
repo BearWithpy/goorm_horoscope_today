@@ -36,36 +36,57 @@ const Card = (): React.JSX.Element => {
   return (
     <>
       <div className={styles.guidance}>카드를 클릭하세요.</div>
-      <div className={styles.flip}>
-        <div className={styles.card}>
-          <div className={styles.card_front}>
-            {randomImagePaths.map((path, index) => (
-              <img
-                className={styles.card_img}
-                key={index}
-                src={path}
-                alt={`Random Card Front ${index}`}
-              />
-            ))}
+      <div className={styles.card_space}>
+        {isClicked ? (
+          <>
+            <div className={styles.flip}>
+              <div className={styles.card}>
+                <div className={styles.card_back}>
+                  <div className={styles.pattern}></div>
+                </div>
+              </div>
+            </div>
+            <div className={styles.flip}>
+              <div className={styles.card}>
+                <div className={styles.card_back}>
+                  <div className={styles.pattern}></div>
+                </div>
+              </div>
+            </div>
+            <div className={styles.flip}>
+              <div className={styles.card}>
+                <div className={styles.card_back}>
+                  <div className={styles.pattern}></div>
+                </div>
+              </div>
+            </div>
+          </>
+        ) : (
+          <div className={styles.flip}>
+            <div className={styles.card}>
+              <div className={styles.card_front}>
+                {randomImagePaths.map((path, index) => (
+                  <img
+                    className={styles.card_img}
+                    key={index}
+                    src={path}
+                    alt={`Random Card Front ${index}`}
+                  />
+                ))}
+              </div>
+              <div
+                className={styles.card_back}
+                onClick={() => {
+                  console.log("Go Detail page and check out");
+                  handleCardClick();
+                }}
+              >
+                <div className={styles.pattern}></div>
+              </div>
+            </div>
           </div>
-          <div
-            className={styles.card_back}
-            onClick={() => {
-              console.log("Go Detail page and check out");
-              handleCardClick();
-            }}
-          >
-            <div className={styles.pattern}></div>
-          </div>
-        </div>
+        )}
       </div>
-      {isClicked && (
-        <>
-          <div className={styles.card_back}>
-            <div className={styles.pattern}></div>
-          </div>
-        </>
-      )}
     </>
   );
 };

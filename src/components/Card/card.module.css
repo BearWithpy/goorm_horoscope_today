@@ -74,14 +74,21 @@
 
 .guidance {
   position: absolute;
-  top: 50%;
+  top: 10%;
   left: 50%;
-  transform: translate(-50%, 250%);
+  transform: translate(-50%, -50%);
   color: white;
   font-size: 30px;
   font-weight: bold;
   font-family: "Grandiflora One";
   animation: guidanceFadeIn 8s;
+}
+
+.card_space {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
 }
 
 @keyframes guidanceFadeIn {
@@ -99,7 +106,7 @@
 .flip {
   width: 206px;
   height: 294px;
-  margin-top: 20px;
+  margin-top: 100px;
   animation: sizeChange 4s;
 }
 
@@ -107,7 +114,6 @@
   width: 100%;
   height: 100%;
   position: relative;
-  /* top: 120%; */
   transition: 0.4s;
   transform-style: preserve-3d;
   animation: flipFlip 8s;
