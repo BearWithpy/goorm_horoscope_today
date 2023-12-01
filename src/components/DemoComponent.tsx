@@ -1,7 +1,7 @@
-import React from "react"
+import React from "react";
 
 const DemoComponent = () => {
-    return <div></div>
-}
+  return <div></div>;
+};
 
-export default DemoComponent
+export default DemoComponent;
