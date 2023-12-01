@@ -1,0 +1,14 @@
+.container {
+	display: flex;
+	margin-top: 200px;
+}
+
+.card {
+	position: relative;
+	top: 10px;
+}
+
+.fortune_quote_container {
+	color: #f5f7f8;
+	font-family: "Grandiflora One";
+}
