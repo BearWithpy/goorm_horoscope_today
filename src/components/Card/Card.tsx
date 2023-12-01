@@ -22,11 +22,16 @@ const Card = (): React.JSX.Element => {
 
   // 이미지 경로들을 저장할 상태
   const [randomImagePaths, setRandomImagePaths] = useState<string[]>([]);
+  const [isClicked, setIsClicked] = useState(false);
 
   // 컴포넌트가 마운트될 때 랜덤 이미지 경로를 선택
   useEffect(() => {
     setRandomImagePaths(getRandomImagePaths(imageUrls, 1));
   }, []); // 빈 의존성 배열을 사용하여 처음 마운트될 때만 실행
+
+  const handleCardClick = () => {
+    setIsClicked(!isClicked);
+  };
 
   return (
     <>
@@ -47,12 +52,20 @@ const Card = (): React.JSX.Element => {
             className={styles.card_back}
             onClick={() => {
               console.log("Go Detail page and check out");
+              handleCardClick();
             }}
           >
             <div className={styles.pattern}></div>
           </div>
         </div>
       </div>
+      {isClicked && (
+        <>
+          <div className={styles.card_back}>
+            <div className={styles.pattern}></div>
+          </div>
+        </>
+      )}
     </>
   );
 };
