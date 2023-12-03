@@ -3,19 +3,20 @@ import styles from "pages/detailPage.module.css";
 import FrontCard from "components/Card/FrontCard";
 import { useParams } from "react-router-dom";
 import horoscopeCall from "utils/horoscope";
+import useHoroscopeStore from "store/horoscopeStore";
 
 const DetailPage = (): React.JSX.Element => {
-	const [horoscope, setHoroscope] = useState("");
+	const { horoscope } = useHoroscopeStore();
 
-	useEffect(() => {
-		horoscopeCall().then((horoJson) => {
-			if (horoJson) {
-				setHoroscope(horoJson);
-			} else {
-				console.log("no horoscope data received.");
-			}
-		});
-	}, []);
+	// useEffect(() => {
+	// 	horoscopeCall().then((horoJson) => {
+	// 		if (horoJson) {
+	// 			setHoroscope(horoJson);
+	// 		} else {
+	// 			console.log("no horoscope data received.");
+	// 		}
+	// 	});
+	// }, []);
 
 	const { id } = useParams();
 
@@ -27,10 +28,10 @@ const DetailPage = (): React.JSX.Element => {
 			{horoscope && (
 				<div className={styles.fortune_quote_container}>
 					<div className={styles.fortune}>
-						<h1>{JSON.parse(horoscope).fortune}</h1>
+						<h1>{horoscope.fortune}</h1>
 					</div>
 					<div className={styles.quote}>
-						<h2>{JSON.parse(horoscope).quote}</h2>
+						<h2>{horoscope.quote}</h2>
 					</div>
 				</div>
 			)}
