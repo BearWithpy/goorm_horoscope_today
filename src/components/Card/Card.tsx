@@ -46,44 +46,40 @@ const Card = (): React.JSX.Element => {
   };
 
   return (
-    <div className={styles.body_inner}>
-      <div className={styles.guidance}>{guidance}</div>
-      <div className={styles.card_space}>
-        {isClicked ? (
-          <>
-            <Link to="/first_card" className={styles.pattern} />
-            <Link to="/second_card" className={styles.pattern} />
-            <Link to="/third_card" className={styles.pattern} />
-            <Link to="/fourth_card" className={styles.pattern} />
-            <Link to="/fifth_card" className={styles.pattern} />
-          </>
-        ) : (
-          <div className={styles.flip}>
-            <div className={styles.card}>
-              <div className={styles.card_front}>
-                {randomImagePaths.map((path, index) => (
-                  <img
-                    className={styles.card_img}
-                    key={index}
-                    src={path}
-                    alt={`Random Card Front ${index}`}
-                  />
-                ))}
-              </div>
-              <div
-                className={styles.card_back}
-                onClick={() => {
-                  console.log("Go Detail page and check out");
-                  handleCardClick();
-                }}
-              >
-                <div className={styles.pattern}></div>
-              </div>
+    <div className={styles.card_space}>
+      {isClicked ? (
+        <>
+          <Link to="/detail/1" className={styles.pattern} />
+          <Link to="/detail/2" className={styles.pattern} />
+          <Link to="/detail/3" className={styles.pattern} />
+          <Link to="/detail/4" className={styles.pattern} />
+          <Link to="/detail/5" className={styles.pattern} />
+        </>
+      ) : (
+        <div className={styles.flip}>
+          <div className={styles.card}>
+            <div className={styles.card_front}>
+              {randomImagePaths.map((path, index) => (
+                <img
+                  className={styles.card_img}
+                  key={index}
+                  src={path}
+                  alt={`Random Card Front ${index}`}
+                />
+              ))}
+            </div>
+            <div
+              className={styles.card_back}
+              onClick={() => {
+                console.log("Go Detail page and check out");
+                handleCardClick();
+              }}
+            >
+              <div className={styles.pattern}></div>
             </div>
           </div>
-        )}
-      </div>
-      <div className={styles.textForWaiting}>카드에 기 모으는 중...</div>
+        </div>
+      )}
     </div>
   );
 };

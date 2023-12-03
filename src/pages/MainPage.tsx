@@ -1,10 +1,10 @@
-import Card from "components/Card/Card";
+import CardContainer from "components/Card/CardContainer";
 import React from "react";
 
 const MainPage = () => {
   return (
     <div>
-      <Card />
+      <CardContainer />
     </div>
   );
 };

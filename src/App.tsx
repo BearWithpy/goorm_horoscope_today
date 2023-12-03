@@ -7,6 +7,7 @@ import MainPage from "pages/MainPage";
 
 import horoscopeCall from "utils/horoscope";
 import DetailPage from "pages/DetailPage";
+import DetailComponent from "components/DetailInfo/DetailComponent";
 
 const App = (): React.JSX.Element => {
   // async function fetchAndParseHoroscope() {
@@ -39,7 +40,8 @@ const App = (): React.JSX.Element => {
         <Header />
         <Routes>
           <Route path="/" element={<MainPage />} />
-          <Route path="/detail" element={<DetailPage />} />
+          {/* <Route path="/detail/:id" element={<DetailPage />} /> */}
+          <Route path="/detail/:id" element={<DetailComponent />} />
         </Routes>
         <Footer />
       </BrowserRouter>
