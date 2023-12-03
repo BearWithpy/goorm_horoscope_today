@@ -24,8 +24,6 @@ const DetailPage = (): React.JSX.Element => {
   return (
     <div className={styles.container}>
       <DetailComponent />
-      <div>{id}</div>
-
       {horoscope && (
         <div className={styles.fortune_quote_container}>
           <div className={styles.fortune}>
