@@ -143,12 +143,21 @@
   font-size: 20px;
   font-family: "Grandiflora One";
   font-weight: bold;
-  animation: fadeOut 4.5s forwards;
+  animation: fadeOut 3.5s forwards;
 }
 
 @keyframes fadeOut {
   0% {
     opacity: 1;
+  }
+  20% {
+    opacity: 0.5;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0.5;
   }
   80% {
     opacity: 1;
