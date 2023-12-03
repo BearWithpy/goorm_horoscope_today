@@ -11,45 +11,47 @@ import DetailComponent from "components/DetailInfo/DetailComponent";
 import useHoroscopeStore from "store/horoscopeStore";
 
 const App = (): React.JSX.Element => {
-	const { setHoroscope } = useHoroscopeStore();
+  const { setHoroscope } = useHoroscopeStore();
 
-	async function fetchAndParseHoroscope() {
-		try {
-			const horoStr = await horoscopeCall();
-			if (horoStr) {
-				const horoJson = JSON.parse(horoStr);
-				return horoJson;
-			}
-			return null;
-		} catch (error) {
-			console.error("Horoscope fetching or parsing failed:", error);
-			return null;
-		}
-	}
+  async function fetchAndParseHoroscope() {
+    try {
+      const horoStr = await horoscopeCall();
+      if (horoStr) {
+        const horoJson = JSON.parse(horoStr);
+        return horoJson;
+      }
+      return null;
+    } catch (error) {
+      console.error("Horoscope fetching or parsing failed:", error);
+      return null;
+    }
+  }
 
-	useEffect(() => {
-		fetchAndParseHoroscope().then((horoJson) => {
-			if (horoJson) {
-				setHoroscope(horoJson);
-			} else {
-				console.log("No horoscope data received.");
-			}
-		});
-	}, []);
+  useEffect(() => {
+    fetchAndParseHoroscope().then((horoJson) => {
+      if (horoJson) {
+        setHoroscope(horoJson);
+      } else {
+        console.log("No horoscope data received.");
+      }
+    });
+  }, []);
 
-	return (
-		<div>
-			<BrowserRouter>
-				<Header />
-				<Routes>
-					<Route path="/" element={<MainPage />} />
-					<Route path="/detail1" element={<DetailPage />} />
-					<Route path="/detail/:id" element={<DetailComponent />} />
-				</Routes>
-				<Footer />
-			</BrowserRouter>
-		</div>
-	);
+  return (
+    <div>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          {/* <Route path="/detail1" element={<DetailPage />} /> */}
+          {/* <Route path="/detail/:id" element={<DetailComponent />} />
+           */}
+          <Route path="/detail/:id" element={<DetailPage />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </div>
+  );
 };
 
 export default App;

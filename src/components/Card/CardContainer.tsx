@@ -3,8 +3,6 @@ import React, { useEffect, useState } from "react";
 import Card from "./Card";
 
 import styles from "components/Card/card.module.css";
-import horoscopeCall from "utils/horoscope";
-import { Link } from "react-router-dom";
 
 const CardContainer = () => {
   // 이미지 경로들을 저장할 상태

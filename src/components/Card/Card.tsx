@@ -49,26 +49,11 @@ const Card = (): React.JSX.Element => {
     <div className={styles.card_space}>
       {isClicked ? (
         <>
-          <Link
-            to="/detail/1"
-            className={`${styles.pattern} ${styles.pattern_five}`}
-          />
-          <Link
-            to="/detail/2"
-            className={`${styles.pattern} ${styles.pattern_five}`}
-          />
-          <Link
-            to="/detail/3"
-            className={`${styles.pattern} ${styles.pattern_five}`}
-          />
-          <Link
-            to="/detail/4"
-            className={`${styles.pattern} ${styles.pattern_five}`}
-          />
-          <Link
-            to="/detail/5"
-            className={`${styles.pattern} ${styles.pattern_five}`}
-          />
+          <Link to="/detail/1" className={styles.pattern} />
+          <Link to="/detail/2" className={styles.pattern} />
+          <Link to="/detail/3" className={styles.pattern} />
+          <Link to="/detail/4" className={styles.pattern} />
+          <Link to="/detail/5" className={styles.pattern} />
         </>
       ) : (
         <div className={styles.flip}>
