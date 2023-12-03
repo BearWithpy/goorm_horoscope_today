@@ -8,8 +8,11 @@ import MainPage from "pages/MainPage";
 import horoscopeCall from "utils/horoscope";
 import DetailPage from "pages/DetailPage";
 import DetailComponent from "components/DetailInfo/DetailComponent";
+import useHoroscopeStore from "store/horoscopeStore";
 
 const App = (): React.JSX.Element => {
+	const { setHoroscope } = useHoroscopeStore();
+
 	async function fetchAndParseHoroscope() {
 		try {
 			const horoStr = await horoscopeCall();
@@ -27,7 +30,7 @@ const App = (): React.JSX.Element => {
 	useEffect(() => {
 		fetchAndParseHoroscope().then((horoJson) => {
 			if (horoJson) {
-				console.log(horoJson);
+				setHoroscope(horoJson);
 			} else {
 				console.log("No horoscope data received.");
 			}
