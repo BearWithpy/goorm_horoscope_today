@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import styles from "components/Card/DetailCard.module.css";
+import styles from "components/Card/detailcard.module.css";
 
 const DetailCard = () => {
   // 이미지 경로들을 저장할 상태
