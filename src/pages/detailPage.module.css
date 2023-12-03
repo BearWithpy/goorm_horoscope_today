@@ -1,25 +1,30 @@
 .container {
-	display: flex;
-	margin-top: 210px;
-}
-
-.card {
-	position: relative;
-	top: 10px;
+  display: flex;
 }
 
 .fortune_quote_container {
-	color: #f5f7f8;
-	font-family: "Grandiflora One";
-	margin-left: 60px;
-	margin-top: 50px;
-	width: 60%;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+  color: #f5f7f8;
+  font-family: "Grandiflora One";
+  margin-left: 60px;
+  margin-top: 50px;
+  z-index: 1;
+  animation: fadeIn2 5s;
 }
 
-.fortune h1 {
-	font-size: 3rem;
-}
-
-.quote h2 {
-	font-size: 2rem;
+@keyframes fadeIn2 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
