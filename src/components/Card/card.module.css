@@ -109,6 +109,7 @@
 .pattern {
   width: 206px;
   height: 294px;
+  border: 2px solid #f5f7f8;
   border-radius: 20px;
   --s: 40px; /* control the size */
   --_g: #fcd036 0 100%, #0000 102%;
@@ -164,5 +165,57 @@
   }
   100% {
     opacity: 0;
+  }
+}
+
+.pattern_five:nth-child(1) {
+  animation: translateX1 1.5s;
+}
+
+@keyframes translateX1 {
+  0% {
+    transform: translateX(300%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.pattern_five:nth-child(2) {
+  animation: translateX2 1.5s;
+}
+
+@keyframes translateX2 {
+  0% {
+    transform: translateX(200%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.pattern_five:nth-child(4) {
+  animation: translateX4 1.5s;
+}
+
+@keyframes translateX4 {
+  0% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.pattern_five:nth-child(5) {
+  animation: translateX5 1.5s;
+}
+
+@keyframes translateX5 {
+  0% {
+    transform: translateX(-300%);
+  }
+  100% {
+    transform: translateX(0%);
   }
 }
