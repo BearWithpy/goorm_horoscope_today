@@ -67,19 +67,19 @@ const DetailCard = () => {
       </div>
       <div
         className={styles.pattern}
-        style={{ display: isVisible ? "block" : "none" }}
+        style={{ display: isVisible ? "block" : "hidden" }}
       ></div>
       <div
         className={styles.pattern}
-        style={{ display: isVisible ? "block" : "none" }}
+        style={{ display: isVisible ? "block" : "hidden" }}
       ></div>
       <div
         className={styles.pattern}
-        style={{ display: isVisible ? "block" : "none" }}
+        style={{ display: isVisible ? "block" : "hidden" }}
       ></div>
       <div
         className={styles.pattern}
-        style={{ display: isVisible ? "block" : "none" }}
+        style={{ display: isVisible ? "block" : "hidden" }}
       ></div>
     </div>
   );
