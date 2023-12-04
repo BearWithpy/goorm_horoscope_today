@@ -86,7 +86,6 @@ const Card = (): React.JSX.Element => {
             <div
               className={styles.card_back}
               onClick={() => {
-                console.log("Go Detail page and check out");
                 handleCardClick();
               }}
             >

@@ -43,9 +43,6 @@ const App = (): React.JSX.Element => {
         <Header />
         <Routes>
           <Route path="/" element={<MainPage />} />
-          {/* <Route path="/detail1" element={<DetailPage />} /> */}
-          {/* <Route path="/detail/:id" element={<DetailComponent />} />
-           */}
           <Route path="/detail/:id" element={<DetailPage />} />
         </Routes>
         <Footer />

@@ -9,16 +9,6 @@ import DetailComponent from "components/DetailInfo/DetailComponent";
 const DetailPage = (): React.JSX.Element => {
   const { horoscope } = useHoroscopeStore();
 
-  // useEffect(() => {
-  // 	horoscopeCall().then((horoJson) => {
-  // 		if (horoJson) {
-  // 			setHoroscope(horoJson);
-  // 		} else {
-  // 			console.log("no horoscope data received.");
-  // 		}
-  // 	});
-  // }, []);
-
   const { id } = useParams();
 
   return (
