@@ -123,23 +123,27 @@
 }
 
 .pattern:nth-child(2) {
-  animation: translateX 2s forwards;
+  animation: fadeOut 2s forwards;
 }
 .pattern:nth-child(3) {
-  animation: translateX 2s forwards;
+  animation: fadeOut 2s forwards;
 }
 .pattern:nth-child(4) {
-  animation: translateX 2s forwards;
+  animation: fadeOut 2s forwards;
 }
 .pattern:nth-child(5) {
-  animation: translateX 2s forwards;
+  animation: fadeOut 2s forwards;
 }
 
-@keyframes translateX {
+@keyframes fadeOut {
   0% {
-    transform: translateX(0);
+    width: 206px;
+    height: 294px;
+    opacity: 1;
   }
   100% {
-    transform: translateX(1000%);
+    width: 0;
+    height: 0;
+    opacity: 0;
   }
 }
