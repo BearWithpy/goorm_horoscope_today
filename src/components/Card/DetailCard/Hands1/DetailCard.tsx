@@ -37,43 +37,45 @@ const DetailCard = () => {
   }, []);
 
   return (
-    <div className={styles.card_space}>
-      <div
-        className={styles.flip}
-        style={{ position: isPositioning ? "absolute" : "inherit" }}
-      >
-        <div className={styles.card}>
-          <div className={styles.card_front}>
-            {randomImagePaths.map((path, index) => (
-              <img
-                className={styles.card_img}
-                key={index}
-                src={path}
-                alt={`Random Card Front ${index}`}
-              />
-            ))}
-          </div>
-          <div className={styles.card_back}>
-            <div className={styles.pattern}></div>
+    <div className={styles.body_inner}>
+      <div className={styles.card_space}>
+        <div
+          className={styles.flip}
+          style={{ position: isPositioning ? "absolute" : "inherit" }}
+        >
+          <div className={styles.card}>
+            <div className={styles.card_front}>
+              {randomImagePaths.map((path, index) => (
+                <img
+                  className={styles.card_img}
+                  key={index}
+                  src={path}
+                  alt={`Random Card Front ${index}`}
+                />
+              ))}
+            </div>
+            <div className={styles.card_back}>
+              <div className={styles.pattern}></div>
+            </div>
           </div>
         </div>
+        <div
+          className={styles.pattern}
+          style={{ display: isVisible ? "block" : "hidden" }}
+        ></div>
+        <div
+          className={styles.pattern}
+          style={{ display: isVisible ? "block" : "hidden" }}
+        ></div>
+        <div
+          className={styles.pattern}
+          style={{ display: isVisible ? "block" : "hidden" }}
+        ></div>
+        <div
+          className={styles.pattern}
+          style={{ display: isVisible ? "block" : "hidden" }}
+        ></div>
       </div>
-      <div
-        className={styles.pattern}
-        style={{ display: isVisible ? "block" : "hidden" }}
-      ></div>
-      <div
-        className={styles.pattern}
-        style={{ display: isVisible ? "block" : "hidden" }}
-      ></div>
-      <div
-        className={styles.pattern}
-        style={{ display: isVisible ? "block" : "hidden" }}
-      ></div>
-      <div
-        className={styles.pattern}
-        style={{ display: isVisible ? "block" : "hidden" }}
-      ></div>
     </div>
   );
 };
