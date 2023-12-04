@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styles from "containers/Header/Header.module.css";
+import horoscopeCall from "utils/horoscope";
+import useHoroscopeStore from "store/horoscopeStore";
 
 const Header = (): React.JSX.Element => {
   const [headerText, setHeaderText] = useState("환영합니다.");
+  const { setHoroscope } = useHoroscopeStore();
 
   useEffect(() => {
     const startTimestamp = performance.now();
@@ -27,7 +30,15 @@ const Header = (): React.JSX.Element => {
 
   return (
     <div className={styles.header_space}>
-      <Link to="/" className={styles.title}>
+      <Link
+        to="/"
+        onClick={async () => {
+          const horo = await horoscopeCall();
+          const horoJSON = JSON.parse(horo!);
+          setHoroscope(horoJSON);
+        }}
+        className={styles.title}
+      >
         {headerText}
       </Link>
     </div>
