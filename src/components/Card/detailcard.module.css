@@ -28,6 +28,7 @@
 .flip {
   width: 206px;
   height: 294px;
+  animation: sizeChange 4s forwards, positioning 2s forwards;
 }
 
 @keyframes sizeChange {
@@ -36,8 +37,17 @@
     height: 294px;
   }
   100% {
-    width: 512px;
+    width: 440px;
     height: 588px;
+  }
+}
+
+@keyframes positioning {
+  0% {
+  }
+  100% {
+    top: 50%;
+    left: 15%;
   }
 }
 
@@ -71,7 +81,7 @@
   height: 100%;
   backface-visibility: hidden;
   box-shadow: 0 0 10px 5px #6e6e6e;
-  border-radius: 25px;
+  border-radius: 50px;
   transition: 0.5s;
 }
 
@@ -83,8 +93,7 @@
 .card_front img {
   width: 97%;
   height: 98%;
-  border-radius: 20px;
-  animation: sizeChange 4s forwards;
+  border-radius: 10px;
 }
 
 @keyframes flip {
@@ -111,9 +120,6 @@
   background-size: var(--s) var(--s);
   transition: 0.4s;
   animation: fadeIn2 2s, sizeChange 4s;
-}
-
-.pattern:nth-child(1) {
 }
 
 .pattern:nth-child(2) {

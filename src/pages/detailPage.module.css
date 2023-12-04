@@ -1,18 +1,13 @@
-.container {
-  display: flex;
-}
-
 .fortune_quote_container {
   position: absolute;
-  top: 50%;
+  top: 170%;
   left: 40%;
   display: flex;
   flex-direction: column;
   width: 700px;
   color: #f5f7f8;
   font-family: "Grandiflora One";
-  margin-left: 60px;
-  margin-top: 50px;
+  margin-left: 170px;
   z-index: 1;
   animation: fadeIn2 5s;
 }
