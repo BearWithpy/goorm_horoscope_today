@@ -125,7 +125,7 @@
 
   background-size: var(--s) var(--s);
   transition: 0.4s;
-  animation: fadeIn2 2s, sizeChange 4s;
+  animation: fadeOut 2s forwards;
 }
 
 .second {
@@ -145,22 +145,6 @@
   background-size: var(--s) var(--s);
   transition: 0.4s;
   animation: fadeIn2 2s, sizeChange 4s;
-}
-
-.pattern:nth-child(1) {
-  animation: fadeOut 2s forwards;
-}
-
-.pattern:nth-child(3) {
-  animation: fadeOut 2s forwards;
-}
-
-.pattern:nth-child(4) {
-  animation: fadeOut 2s forwards;
-}
-
-.pattern:nth-child(5) {
-  animation: fadeOut 2s forwards;
 }
 
 @keyframes fadeOut {
