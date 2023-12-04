@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from "react";
-import styles from "components/Card/DetailCard/Hands1/detailcard.module.css";
+import styles from "components/Card/DetailCard/Hands5/hands5.module.css";
 
 const Hands5 = () => {
   // 이미지 경로들을 저장할 상태
