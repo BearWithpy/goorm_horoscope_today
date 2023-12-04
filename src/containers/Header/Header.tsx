@@ -3,10 +3,12 @@ import { Link } from "react-router-dom";
 import styles from "containers/Header/Header.module.css";
 import horoscopeCall from "utils/horoscope";
 import useHoroscopeStore from "store/horoscopeStore";
+import useGuidanceStore from "store/guidanceStore";
 
 const Header = (): React.JSX.Element => {
   const [headerText, setHeaderText] = useState("환영합니다.");
   const { setHoroscope } = useHoroscopeStore();
+  const { toggleGuidance } = useGuidanceStore();
 
   useEffect(() => {
     const startTimestamp = performance.now();
@@ -35,6 +37,7 @@ const Header = (): React.JSX.Element => {
         onClick={async () => {
           const horo = await horoscopeCall();
           const horoJSON = JSON.parse(horo!);
+          toggleGuidance("카드를 클릭하세요.");
           setHoroscope(horoJSON);
         }}
         className={styles.title}

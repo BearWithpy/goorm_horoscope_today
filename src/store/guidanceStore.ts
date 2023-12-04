@@ -12,7 +12,7 @@ const useGuidanceStore = create<GuidanceStore>(
     toggleGuidance: (guide: string) => {
       set(() => {
         return {
-          guidance: "원하는 카드를 고르세요.",
+          guidance: guide,
         };
       });
     },
