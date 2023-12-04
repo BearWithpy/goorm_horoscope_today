@@ -46,6 +46,18 @@ const Hands4 = () => {
   return (
     <div className={styles.card_space}>
       <div
+        className={styles.pattern}
+        style={{ display: isVisible ? "block" : "hidden" }}
+      ></div>
+      <div
+        className={styles.pattern}
+        style={{ display: isVisible ? "block" : "hidden" }}
+      ></div>
+      <div
+        className={styles.pattern}
+        style={{ display: isVisible ? "block" : "hidden" }}
+      ></div>
+      <div
         className={styles.flip}
         style={{ position: isPositioning ? "absolute" : "inherit" }}
       >
@@ -61,22 +73,10 @@ const Hands4 = () => {
             ))}
           </div>
           <div className={styles.card_back}>
-            <div className={styles.pattern}></div>
+            <div className={styles.fourth}></div>
           </div>
         </div>
       </div>
-      <div
-        className={styles.pattern}
-        style={{ display: isVisible ? "block" : "hidden" }}
-      ></div>
-      <div
-        className={styles.pattern}
-        style={{ display: isVisible ? "block" : "hidden" }}
-      ></div>
-      <div
-        className={styles.pattern}
-        style={{ display: isVisible ? "block" : "hidden" }}
-      ></div>
       <div
         className={styles.pattern}
         style={{ display: isVisible ? "block" : "hidden" }}

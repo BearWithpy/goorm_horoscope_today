@@ -28,13 +28,6 @@ const DetailCard = () => {
     return Array.from(selectedImages);
   }
 
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     setRandomImagePaths(getRandomImagePaths(imageUrls, 1));
-  //   }, 3000);
-  //   return () => clearTimeout(timer);
-  // }, []);
-
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(false);

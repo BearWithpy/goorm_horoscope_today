@@ -36,6 +36,7 @@
     width: 206px;
     height: 294px;
   }
+
   100% {
     width: 440px;
     height: 588px;
@@ -45,6 +46,7 @@
 @keyframes positioning {
   0% {
   }
+
   100% {
     top: 50%;
     left: 15%;
@@ -69,6 +71,7 @@
 }
 
 /* // 뒷면은 사전에 미리 뒤집기 */
+
 .card_back {
   background: rgb(253, 239, 160);
   cursor: pointer;
@@ -100,6 +103,7 @@
   40% {
     transform: rotateY(0deg);
   }
+
   100% {
     transform: rotateY(180deg);
   }
@@ -111,26 +115,50 @@
   border-radius: 20px;
   --s: 40px; /* control the size */
   --_g: #fcd036 0 100%, #0000 102%;
+
   background: conic-gradient(#0000 75%, var(--_g)) calc(var(--s) / 4)
       calc(var(--s) / 4),
     radial-gradient(65% 65% at 50% -50%, var(--_g)),
     radial-gradient(65% 65% at -50% 50%, var(--_g)),
     radial-gradient(65% 65% at 50% 150%, var(--_g)),
     radial-gradient(65% 65% at 150% 50%, var(--_g)) #987f69;
+
   background-size: var(--s) var(--s);
   transition: 0.4s;
   animation: fadeIn2 2s, sizeChange 4s;
 }
 
-.pattern:nth-child(2) {
+.second {
+  width: 206px;
+  height: 294px;
+  border-radius: 20px;
+  --s: 40px; /* control the size */
+  --_g: #fcd036 0 100%, #0000 102%;
+
+  background: conic-gradient(#0000 75%, var(--_g)) calc(var(--s) / 4)
+      calc(var(--s) / 4),
+    radial-gradient(65% 65% at 50% -50%, var(--_g)),
+    radial-gradient(65% 65% at -50% 50%, var(--_g)),
+    radial-gradient(65% 65% at 50% 150%, var(--_g)),
+    radial-gradient(65% 65% at 150% 50%, var(--_g)) #987f69;
+
+  background-size: var(--s) var(--s);
+  transition: 0.4s;
+  animation: fadeIn2 2s, sizeChange 4s;
+}
+
+.pattern:nth-child(1) {
   animation: fadeOut 2s forwards;
 }
+
 .pattern:nth-child(3) {
   animation: fadeOut 2s forwards;
 }
+
 .pattern:nth-child(4) {
   animation: fadeOut 2s forwards;
 }
+
 .pattern:nth-child(5) {
   animation: fadeOut 2s forwards;
 }
@@ -141,6 +169,7 @@
     height: 294px;
     opacity: 1;
   }
+
   100% {
     width: 0;
     height: 0;

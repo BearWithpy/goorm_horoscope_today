@@ -3,11 +3,12 @@ import React, { useEffect, useState } from "react";
 import Card from "./Card";
 
 import styles from "components/Card/card.module.css";
+import useGuidanceStore from "store/guidanceStore";
 
 const CardContainer = () => {
   // 이미지 경로들을 저장할 상태
 
-  const [guidance, setGuidance] = useState("카드를 클릭하세요.");
+  const { guidance } = useGuidanceStore();
 
   return (
     <div className={styles.body_inner}>

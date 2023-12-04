@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 import styles from "components/Card/card.module.css";
 import horoscopeCall from "utils/horoscope";
+import useGuidanceStore from "store/guidanceStore";
 
 const Card = (): React.JSX.Element => {
   const imageUrls: string[] = [
@@ -24,8 +25,9 @@ const Card = (): React.JSX.Element => {
   // 이미지 경로들을 저장할 상태
   const [randomImagePaths, setRandomImagePaths] = useState<string[]>([]);
   const [isClicked, setIsClicked] = useState(false);
-  const [guidance, setGuidance] = useState("카드를 클릭하세요.");
   const [isAnimated, setIsAnimated] = useState(false);
+
+  const { toggleGuidance } = useGuidanceStore();
 
   // 컴포넌트가 마운트될 때 랜덤 이미지 경로를 선택
   useEffect(() => {
@@ -42,7 +44,7 @@ const Card = (): React.JSX.Element => {
 
   const handleCardClick = () => {
     setIsClicked(!isClicked);
-    setGuidance("원하는 카드를 고르세요.");
+    toggleGuidance("원하는 카드를 고르세요.");
   };
 
   return (

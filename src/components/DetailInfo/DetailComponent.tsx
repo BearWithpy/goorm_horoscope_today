@@ -13,10 +13,8 @@ const DetailComponent = () => {
   const getHandsComponent = (id: string) => {
     switch (id) {
       case "1":
-        console.log(1);
         return <DetailCard />;
       case "2":
-        console.log(2);
         return <Hands2 />;
       case "3":
         return <Hands3 />;
