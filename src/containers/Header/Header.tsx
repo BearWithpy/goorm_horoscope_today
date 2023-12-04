@@ -8,7 +8,7 @@ const Header = (): React.JSX.Element => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setHeaderText("오늘의 운세");
-    }, 4000);
+    }, 2800);
     return () => clearTimeout(timer);
   });
 
