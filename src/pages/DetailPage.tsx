@@ -1,15 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styles from "pages/detailPage.module.css";
-import FrontCard from "components/Card/FrontCard";
-import { useParams } from "react-router-dom";
-import horoscopeCall from "utils/horoscope";
 import useHoroscopeStore from "store/horoscopeStore";
 import DetailComponent from "components/DetailInfo/DetailComponent";
 
 const DetailPage = (): React.JSX.Element => {
   const { horoscope } = useHoroscopeStore();
-
-  const { id } = useParams();
 
   return (
     <div className={styles.container}>

@@ -5,6 +5,7 @@ const DetailCard = () => {
   // 이미지 경로들을 저장할 상태
   const [randomImagePaths, setRandomImagePaths] = useState<string[]>([]);
   const [isVisible, setIsVisible] = useState(true);
+  const [isPositioning, setIsPositioning] = useState(false);
 
   const imageUrls: string[] = [
     "https://blog.kakaocdn.net/dn/bLY3BJ/btsBb8VXuP7/W8tkLTVdr688IL5Vq4S4VK/img.png",
@@ -27,26 +28,27 @@ const DetailCard = () => {
     return Array.from(selectedImages);
   }
 
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setRandomImagePaths(getRandomImagePaths(imageUrls, 1));
+  //   }, 3000);
+  //   return () => clearTimeout(timer);
+  // }, []);
+
   useEffect(() => {
     const timer = setTimeout(() => {
-      setRandomImagePaths(getRandomImagePaths(imageUrls, 1));
-    }, 3000);
+      setIsVisible(false);
+      setIsPositioning(true);
+    }, 2300);
     return () => clearTimeout(timer);
   }, []);
 
-  useEffect(() => {
-    // 2초 후에 isVisible 상태를 false로 변경
-    const timer = setTimeout(() => {
-      setIsVisible(false);
-    }, 4000);
-
-    // 컴포넌트가 unmount 되면 타이머를 클리어
-    return () => clearTimeout(timer);
-  }, []); // 빈 배열을 전달하여 컴포넌트가 처음 마운트될 때만 실행
-
   return (
     <div className={styles.card_space}>
-      <div className={styles.flip}>
+      <div
+        className={styles.flip}
+        style={{ position: isPositioning ? "absolute" : "inherit" }}
+      >
         <div className={styles.card}>
           <div className={styles.card_front}>
             {randomImagePaths.map((path, index) => (
