@@ -8,6 +8,10 @@
 
 5장의 카드 중 하나를 선택해 오늘의 운세와 한 문장의 명언이 나오는 어플리케이션입니다.
 
+
+[![Video Label](http://img.youtube.com/vi/DLFvBqC-DBY/0.jpg)](https://youtu.be/DLFvBqC-DBY)
+
+
 ## ⏱ 개발 기간
 
 
